@@ -5,20 +5,20 @@ public class BubbleSort {
 	private static void sorting(int[] arr) {
 		int len = arr.length;
 		int temp;
-		for (int i = 0; i < len - 1; i++) {							//5 2 4 1 3
-			for (int j = 0; j < len - 1 - i; j++) {					//2 5 4 1 3
-				if (arr[j] > arr[j + 1]) {							//2 4 5 1 3
-					temp = arr[j];									//2 4 1 5 3
-					arr[j] = arr[j + 1];							//2 4 1 3 5
+		for (int i = 0; i < len - 1; i++) {							
+			for (int j = 0; j < len - 1 - i; j++) {					
+				if (arr[j] > arr[j + 1]) {							
+					temp = arr[j];								
+					arr[j] = arr[j + 1];							
 					arr[j + 1] = temp;
-				}													//2 4 1 3
-			}														//2 1 4 3
-		}															//2 1 3 4 
+				}													
+			}														
+		}															 
 	}
-	//Function to print array										//2 1 3 
-	private static void printArray(int[] arr) {						//1 2 3
+	//Function to print array										
+	private static void printArray(int[] arr) {						
 		int len = arr.length;										
-		for (int i = 0; i < len; i++) {								//1 2
+		for (int i = 0; i < len; i++) {							
 			System.out.print(arr[i] + " ");
 		}
 		System.out.println();
