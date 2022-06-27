@@ -1,11 +1,21 @@
 package com.bridgelabz;
 
-public class BubbleSortGeneric<K> {
-	////Function to sort array using bubble sort using generic
-	public <K extends Comparable<K>> K sorting(K[] arr) {
-		K temp = null;
+//Using generic method
+public class BubbleSortGeneric<T> {
 
-		for (int i = 0; i < arr.length - 1; i++) {
+	// Function to print array
+	public static <T> void printArray(T[] arr) {
+		for (T t : arr) {
+			System.out.print(t + " ");
+		}
+		System.out.print(" ");
+	}
+
+	// Function to sort array using bubble sort
+	public <T extends Comparable<T>> T bubbleSort(T[] arr) {
+		int len = arr.length;
+		T temp;
+		for (int i = 0; i < arr.length; i++) {
 			for (int j = 0; j < arr.length - i - 1; j++) {
 				if (arr[j].compareTo(arr[j + 1]) > 0) {
 					temp = arr[j];
@@ -14,29 +24,30 @@ public class BubbleSortGeneric<K> {
 				}
 			}
 		}
-		return temp;
+		return null;
 	}
-	// Function to print array
-	public void printArray(String[] arr) {
-		int len = arr.length;
-		for (int i = 0; i < len; i++) {
-			System.out.print(arr[i] + " ");
-		}
-		System.out.println();
-	}
-	//Main method
+
+	// Main method
 	public static void main(String[] args) {
-		BubbleSort bubbleSort = new BubbleSort();
 
-		String[] arr = { "vish", "madhu", "priya", "ashu", "nisha" };
+		String[] arrayOfString = { "vish", "madhu", "priya", "ashu", "nisha" };
+		BubbleSortGeneric<String> stringSorter = new BubbleSortGeneric<>();
+		System.out.println("String Bubble sorting");
+		System.out.println("\nBefore sorting :");
+		stringSorter.printArray(arrayOfString);
+		stringSorter.bubbleSort(arrayOfString);
+		System.out.println("\nAfter sorting :");
+		stringSorter.printArray(arrayOfString);
+		System.out.println();
 
-		System.out.println("Before sorting");
-		bubbleSort.printArray(arr);
+		System.out.println("\nInteger Bubble sorting");
+		Integer[] arrOfInteger = { 8, 4, 1, 5, 9, 6 };
+		BubbleSortGeneric<String> integerSorter = new BubbleSortGeneric<>();
+		System.out.println("\nBefore sorting :");
+		integerSorter.printArray(arrOfInteger);
+		integerSorter.bubbleSort(arrOfInteger);
+		System.out.println("\nAfter sorting :");
+		integerSorter.printArray(arrOfInteger);
 
-		bubbleSort.sorting(arr);
-
-		System.out.println("After sorting");
-		bubbleSort.printArray(arr);
 	}
-
 }
