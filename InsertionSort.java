@@ -2,20 +2,20 @@ package com.bridgelabz;
 //Java program for implementation of Insertion Sort
 public class InsertionSort {							 
 	 //Function to sort array using insertion sort										
-	public void sorting(int[] arr) {                     
-		int len = arr.length;							
-		for(int i = 0; i<len ; i++){ 				
-			int temp = arr[i];							
+	public void sorting(String [] arr) {                     
+									
+		for(int i = 1; i<arr.length ; i++){ 					
+			String temp = arr[i];							
 			int j = i-1;								
-			while(j>=0 && arr[j]>temp) {  				           
-				arr[j+1] = arr[j];										
+			while(j >= 0 && arr[j].compareTo(temp) > 0) {  				           
+				arr[j+1] = arr[j];								
 				j--;									
 			}
-			arr[j+1] = temp;							
-		}                                              
+			arr[j+1] = temp;						
+		}                                               
 	}
 	//Function to print array
-	public void printArray(int[] arr) {
+	public void printArray(String[] arr) {
 		int len = arr.length;
 		for(int i = 0; i<len ; i++ ) {
 			System.out.print(arr[i] + " ");
@@ -24,10 +24,12 @@ public class InsertionSort {
 	}
 
 	public static void main(String[] args) {
-		int [] arr = {8, 4, 1, 5, 9, 6};
+		String [] arr = {"vish","madhu","priya","ashu","nisha"};
 		InsertionSort insertionSort = new InsertionSort();
+		
 		System.out.println("Before sorting");
 		insertionSort.printArray(arr);
+		
 		insertionSort.sorting(arr);
 		System.out.println("After sorting");
 		insertionSort.printArray(arr);
