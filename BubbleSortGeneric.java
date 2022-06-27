@@ -42,7 +42,7 @@ public class BubbleSortGeneric<T> {
 
 		System.out.println("\nInteger Bubble sorting");
 		Integer[] arrOfInteger = { 8, 4, 1, 5, 9, 6 };
-		BubbleSortGeneric<String> integerSorter = new BubbleSortGeneric<>();
+		BubbleSortGeneric<Integer> integerSorter = new BubbleSortGeneric<>();
 		System.out.println("\nBefore sorting :");
 		integerSorter.printArray(arrOfInteger);
 		integerSorter.bubbleSort(arrOfInteger);
