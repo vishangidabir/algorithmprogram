@@ -1,30 +1,34 @@
 package com.bridgelabz;
 
-public class PrimeNumber {
+import java.util.Scanner;
 
-	static boolean isPrime(int n) {
-		int count = 0;
-		// 0, 1 negative numbers are not prime
-		if (n < 2)
-			return false;
-		// checking the number of divisors b/w 1 and the number n
-		for (int i = 2; i < n / 2; i++) {
-			if (n % i == 0)
-				return false;
+public class PrimeNumber {
+	static int low, upp, num, temp, i, count;
+
+	public void isPrime() {
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("Enter the lower limit");
+		int low = scanner.nextInt();
+		System.out.println("Enter the upper limit");
+		int upp = scanner.nextInt();
+		System.out.println("PrimeNumbers between " + low + " to " + upp);
+		for (num = low; num <= upp; num++) {
+			count = 0;
+			temp = num;
+			for (i = 1; i <= temp; i++) {
+				if (temp % i == 0) {
+					count++;
+				}
+			}
+			if (count == 2) {
+				System.out.print(num + " ");
+			}
 		}
-		// if reached here then must be true
-		return true;
 	}
 
 	public static void main(String[] args) {
 		PrimeNumber primeNumber = new PrimeNumber();
-		int lower = 0;
-		int upper = 1000;
-
-		System.out.println("Prime Number between 0 to 1000 :");
-		for (int i = lower; i <= upper; i++)
-			if (isPrime(i))
-				System.out.println(i + " ");
+		primeNumber.isPrime();
 
 	}
 
