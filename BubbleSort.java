@@ -2,24 +2,24 @@ package com.bridgelabz;
 //Java program for implementation of Bubble Sort
 public class BubbleSort {
 	 //Function to sort array using bubble sort
-	static void sorting(String[] arr) {
+	static void sorting(String[] array) {
 		
 		String temp;
-		for (int i = 0; i < arr.length-1; i++) {							
-			for (int j = 0; j < arr.length- i-1; j++) {					
-				if (arr[j].compareTo(arr[j + 1]) > 0) {							
-					temp = arr[j];									
-					arr[j] = arr[j + 1];							
-					arr[j + 1] = temp;
+		for (int i = 0; i < array.length-1; i++) {
+			for (int j = 0; j < array.length- i-1; j++) {
+				if (array[j].compareTo(array[j + 1]) > 0) {
+					temp = array[j];
+					array[j] = array[j + 1];
+					array[j + 1] = temp;
 				}													
 			}														
 		}														
 	}
 	//Function to print array										
-	static void printArray(String[] arr) {						
+	static void printArray(String[] array) {
 												
-		for (int i = 0; i < arr.length; i++) {								
-			System.out.print(arr[i] + " ");
+		for (int i = 0; i < array.length; i++) {
+			System.out.print(array[i] + " ");
 		}
 		System.out.println();
 	}
@@ -27,15 +27,15 @@ public class BubbleSort {
 	public static void main(String[] args) {
 		BubbleSort bubbleSort = new BubbleSort();
 		
-		String [] arr = { "vish", "madhu", "priya", "ashu", "nisha" };
+		String [] array = { "vish", "madhu", "priya", "ashu", "nisha" };
 		
 		System.out.println("Before sorting");
-		BubbleSort.printArray(arr);
+		BubbleSort.printArray(array);
 		
-		BubbleSort.sorting(arr);
+		BubbleSort.sorting(array);
 		
 		System.out.println("After sorting");
-		BubbleSort.printArray(arr);
+		BubbleSort.printArray(array);
 	}
 
 }
