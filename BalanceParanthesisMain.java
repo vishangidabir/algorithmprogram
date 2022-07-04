@@ -7,10 +7,10 @@ public class BalanceParanthesisMain {
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
 		System.out.println("Enter max size: ");
-		int n = scanner.nextInt();
+		int size = scanner.nextInt();
 
 		// Creating Stack
-		BalanceParanthesis stack = new BalanceParanthesis(n);
+		BalanceParanthesis stack = new BalanceParanthesis(size);
 
 		// Accepting expression
 		System.out.println("Enter expression: ");
