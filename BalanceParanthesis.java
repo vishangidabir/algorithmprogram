@@ -15,7 +15,6 @@ public class BalanceParanthesis {
 	stackArray = new long[maxSize];
 	top = -1;
 	}
-	
 	//for push   
 	public void push(long j)
 	{
