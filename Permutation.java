@@ -13,7 +13,7 @@ public class Permutation {
     }
     // Method for generating permutation of word
     public static void generatePermutation(String string, int left, int right) {
-        if (left == right - 1)
+        if (left == (right - 1))
             System.out.println(string);
         else {
             for (int i = left; i < right; i++) {
