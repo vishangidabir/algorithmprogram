@@ -2,15 +2,15 @@ package com.bridgelabz;
 
 public class BinarySearch {
 
-	private static int binarySearch(String[] arr, String key) {
-		int low = 0, high = arr.length - 1;
+	private static int binarySearch(String[] array, String key) {
+		int low = 0, high = array.length - 1;
 		
 		while (low <= high) {
 			int mid = (low + high) / 2;
-			int res = key.compareTo(arr[mid]);
-			if (res == 0) {
+			int result = key.compareTo(array[mid]);
+			if (result == 0) {
 				return mid;
-			} else if (res < 0) {
+			} else if (result < 0) {
 				high = mid + 1;
 			} else {
 				low = mid - 1;
@@ -20,10 +20,10 @@ public class BinarySearch {
 	}
 	public static void main(String[] args) {
 		
-		String[] arr = { "apple", "banana", "mango", "grapes", "cherry"};
+		String[] array = { "apple", "banana", "mango", "grapes", "cherry"};
         String key = "mango";
         
-        int result = binarySearch(arr, key);
+        int result = binarySearch(array, key);
         
         if(result == -1)
 			 System.out.println("Key is not present");
