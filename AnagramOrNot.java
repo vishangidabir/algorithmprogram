@@ -7,14 +7,14 @@ public class AnagramOrNot {
 
 	public static boolean isAnagram(String str1, String str2) {
 		// calculate length of two string
-		char[] arr1 = str1.toCharArray();
-		char[] arr2 = str2.toCharArray();
+		char[] array1 = str1.toCharArray();
+		char[] array2 = str2.toCharArray();
 		if (str1.length() != str2.length()) {
 			return false;
 		} else {
-			Arrays.sort(arr1);
-			Arrays.sort(arr2);
-			if (Arrays.equals(arr1, arr2)) {
+			Arrays.sort(array1);
+			Arrays.sort(array2);
+			if (Arrays.equals(array1, array2)) {
 				return true;
 			}
 			return false;
