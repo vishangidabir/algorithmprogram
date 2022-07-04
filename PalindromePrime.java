@@ -3,19 +3,19 @@ package com.bridgelabz;
 import java.util.Scanner;
 
 public class PalindromePrime <T>{
- static int low, upp, rev, count;
+ static int lower, upper, reverse, count;
  static int num, temp,i;
 	
 	public <T> void isPrime() {
 		Scanner scanner = new Scanner(System.in);
         System.out.println("Enter the lower limit");
-        int low = scanner.nextInt();
+        int lower = scanner.nextInt();
         System.out.println("Enter the upper limit");
-        int upp = scanner.nextInt();
-        System.out.println("PrimeNumber and Palindrome numbers between "+low+" to "+upp);
-        for (num = low; num <= upp; num++) {
+        int upper = scanner.nextInt();
+        System.out.println("PrimeNumber and Palindrome numbers between "+lower+" to "+upper);
+        for (num = lower; num <= upper; num++) {
             count = 0;
-            rev = 0;
+            reverse = 0;
             temp = num;
             for (i = 1; i <= temp; i++) {
                 if (temp % i == 0) {
@@ -24,10 +24,10 @@ public class PalindromePrime <T>{
             }
             if (count == 2) {
                 while (temp > 0) {
-                    rev = (rev * 10) + (temp % 10);
+                    reverse = (reverse * 10) + (temp % 10);
                     temp = temp / 10;
                 }
-                if (rev == num) {
+                if (reverse == num) {
                     System.out.print(num + " ");
                 }
             }
