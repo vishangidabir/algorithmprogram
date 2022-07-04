@@ -1,9 +1,7 @@
 package com.bridgelabz;
 import java.util.Scanner;
 public class FindingNumber {
-	
 	    static Scanner scanner = new Scanner(System.in);
-
 		public static void searchNumber(int upperBound) {
 			int low = 0;
 			int high = upperBound;
@@ -28,9 +26,9 @@ public class FindingNumber {
 
 		public static void main(String[] args) {
 			System.out.print("Enter the Maximum Number to Find the element: ");
-			int n = scanner.nextInt();
+			int exponent = scanner.nextInt();
 
-			int upperBound = (int) Math.pow(2, n);
+			int upperBound = (int) Math.pow(2, exponent);
 			System.out.println("upperBound = " + upperBound);
 
 			System.out.println("Think a number between 0 to " + (upperBound));
